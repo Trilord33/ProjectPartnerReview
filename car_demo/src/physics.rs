@@ -127,7 +127,7 @@
          for (_, _, mut engine) in joints.iter_mut()
          {
              if engine.rpms < 7300.0{
-                 engine.rpms += 5.0; //this may need to change
+                 engine.rpms += 5.0; // increase RPM
              }
          }
           
@@ -136,7 +136,7 @@
      {
          for (_, _, mut engine) in joints.iter_mut(){
              if engine.rpms > 0.0{
-                 engine.rpms -= 5.0; //this may need to change
+                 engine.rpms -= 5.0; //reduce RPM
              }
          }
      }
@@ -146,13 +146,13 @@
          if button_inputs.pressed(GamepadButton::new(gamepad, GamepadButtonType::South)){
              for (_, _, mut engine) in joints.iter_mut(){
                  if engine.rpms < 7300.0{
-                     engine.rpms += 5.0; //this may need to change
+                     engine.rpms += 5.0; //increase RPM
                  }
              }
          }else{
              for (_, _, mut engine) in joints.iter_mut(){
                  if engine.rpms > 0.0{
-                     engine.rpms -= 5.0; //this may need to change
+                     engine.rpms -= 5.0; //reduce RPM
                  }
              }
              
@@ -169,7 +169,7 @@
          {
              if engine.gear < 5.0
              {
-                 engine.gear = engine.gear + 1.0;
+                 engine.gear = engine.gear + 1.0;//shift gear up
              }
          }
      //downshift
@@ -181,7 +181,7 @@
              println!("Pressed E");
              if engine.gear > 0.0
              {
-                 engine.gear = engine.gear - 1.0;
+                 engine.gear = engine.gear - 1.0;//shift gear down
              }
          }
      //reverse
@@ -191,7 +191,7 @@
          println!("Pressed R");
          for (_, _, mut engine) in joints.iter_mut()
          {
-             engine.gear = -1.0;
+             engine.gear = -1.0;// set gear to reverse
          }
      //neutral
      }
@@ -200,7 +200,7 @@
          println!("Pressed T");
          for (_, _, mut engine) in joints.iter_mut()
          {
-             engine.gear = 0.0;
+             engine.gear = 0.0;//set to neutral
          }
      }
  
@@ -211,7 +211,7 @@
              {
                  if engine.gear < 5.0
                  {
-                     engine.gear = engine.gear + 1.0;
+                     engine.gear = engine.gear + 1.0;//shift up
                  }
              }
          }else if button_inputs.just_released(GamepadButton::new(gamepad, GamepadButtonType::RightTrigger)){
@@ -219,18 +219,18 @@
              {
                  if engine.gear > 0.0
                  {
-                     engine.gear = engine.gear - 1.0;
+                     engine.gear = engine.gear - 1.0;//shift down
                  }
              }
          }else if button_inputs.just_released(GamepadButton::new(gamepad, GamepadButtonType::East)){
              for (_, _, mut engine) in joints.iter_mut()
              {
-                 engine.gear = -1.0;
+                 engine.gear = -1.0;//set to reverse
              }
          }else if button_inputs.just_released(GamepadButton::new(gamepad, GamepadButtonType::RightTrigger2)){
              for (_, _, mut engine) in joints.iter_mut()
              {
-                 engine.gear = 0.0;
+                 engine.gear = 0.0;//shift to neutral
              }
          }
      }
@@ -321,27 +321,27 @@
      let mut steer_angle = 0.;
      if keys.pressed(KeyCode::A)
      {
-         steer_angle += 0.3;
+         steer_angle += 0.3;//turn wheels left
      }
      else if keys.pressed(KeyCode::D)
      {
-         steer_angle -= 0.3;
+         steer_angle -= 0.3;//turn wheels right
      }
  
      for gamepad in gamepads.iter(){
  
          let left_stick_x = axes.get(GamepadAxis::new(gamepad,GamepadAxisType::LeftStickX)).unwrap();
  
-         if left_stick_x > 0.01{
-             steer_angle -= 0.3;
+         if left_stick_x > 0.01{// location of the stick relative to the sticks x axis
+             steer_angle -= 0.3; //turn wheels right
          } else if left_stick_x < -0.01{
-             steer_angle += 0.3;
+             steer_angle += 0.3; //turn wheels left
          }
      }
  
  
      for (mut joint, _) in joints.iter_mut() {
-         joint.q = steer_angle;
+         joint.q = steer_angle;//change the position of the joint
      }
  
  
@@ -356,28 +356,28 @@
      if key.pressed(KeyCode::Space)
      {
          println!("Pressed Space");
-         breaking = 100.0;
+         breaking = 100.0;//hard break
      }else if keys.pressed(KeyCode::LShift)
      {
          println!("Pressed LShift");
-         breaking = 0.5;
+         breaking = 0.5;//soft break
      }
  
  
      
      for gamepad in gamepads.iter(){
          if button_inputs.pressed(GamepadButton::new(gamepad, GamepadButtonType::North)){
-             breaking = 100.0;
+             breaking = 100.0;//hard break
          } else if button_inputs.just_released(GamepadButton::new(gamepad, GamepadButtonType::West)){
-            breaking = 0.5;
+            breaking = 0.5;//soft break
          }
      }
  
      for (mut joint, _) in joints.iter_mut() {
          if breaking == 100.0{
-             joint.qd = 0.0;
+             joint.qd = 0.0;//hard break, set speed to 0
          }else if joint.qd > 0.0{
-             joint.qd -= breaking;
+             joint.qd -= breaking;//soft break, reduce by 0.5
          }
      }
  
@@ -420,13 +420,13 @@
          let mut gear_ratio = 0.0;
          match engine.gear
          {
-             1.0=> gear_ratio = 3.587,
-             2.0=>  gear_ratio = 2.022,
-             3.0=>  gear_ratio = 1.384,
-             4.0=>  gear_ratio = 1.000,
-             5.0=>  gear_ratio = 0.861,
-             -1.0=> gear_ratio = -3.587,
-             0.0 => gear_ratio = 0.000,
+             1.0=> gear_ratio = 3.587,  //1st gear
+             2.0=>  gear_ratio = 2.022, //2nd gear
+             3.0=>  gear_ratio = 1.384, //3rd gear
+             4.0=>  gear_ratio = 1.000, //4th gear 
+             5.0=>  gear_ratio = 0.861, //5th gear
+             -1.0=> gear_ratio = -3.587,//reverse
+             0.0 => gear_ratio = 0.000,//neutral
              _=>  gear_ratio = gear_ratio,
          }
  
@@ -490,7 +490,7 @@
   * Sources: Bevy cheatbook
  *******************************************/
  /// Updates the text which displays the current speed.
- pub fn speed_updater(mut joints: Query<(&mut Joint)>, mut query: Query<&mut Text, With<SpeedText>>) {
+ pub fn speed_updater(mut joints: Query<&mut Joint>, mut query: Query<&mut Text, With<SpeedText>>) {
      //for mut text in &mut query  {
      //    for car in &mut car_query{
      //        let value = car.qd.abs();

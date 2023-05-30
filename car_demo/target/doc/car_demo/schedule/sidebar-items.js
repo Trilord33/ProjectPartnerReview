@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"enum":["PhysicsSet"],"fn":["create_schedule","physics_schedule"],"struct":["PhysicsSchedule"]};
+window.SIDEBAR_ITEMS = {"enum":[["PhysicsSet","Define physics system sets, which are used to group systems together, and define the order in which they are run"]],"fn":[["create_schedule","Creates physics schedule which defines the order in which various physics and driving systems are run. "],["physics_schedule",""]],"struct":[["PhysicsSchedule","Define the physics schedule which will be run in the fixed timestep loop"]]};

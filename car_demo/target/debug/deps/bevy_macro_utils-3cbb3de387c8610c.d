@@ -1,0 +1,10 @@
+C:\Users\andrew\OneDrive\Documents\CodeFreeze\ProjectPartnerReview\car_demo\target\debug\deps\bevy_macro_utils-3cbb3de387c8610c.rmeta: C:\Users\andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_macro_utils-0.10.1\src\lib.rs C:\Users\andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_macro_utils-0.10.1\src\attrs.rs C:\Users\andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_macro_utils-0.10.1\src\shape.rs C:\Users\andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_macro_utils-0.10.1\src\symbol.rs
+
+C:\Users\andrew\OneDrive\Documents\CodeFreeze\ProjectPartnerReview\car_demo\target\debug\deps\libbevy_macro_utils-3cbb3de387c8610c.rlib: C:\Users\andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_macro_utils-0.10.1\src\lib.rs C:\Users\andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_macro_utils-0.10.1\src\attrs.rs C:\Users\andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_macro_utils-0.10.1\src\shape.rs C:\Users\andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_macro_utils-0.10.1\src\symbol.rs
+
+C:\Users\andrew\OneDrive\Documents\CodeFreeze\ProjectPartnerReview\car_demo\target\debug\deps\bevy_macro_utils-3cbb3de387c8610c.d: C:\Users\andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_macro_utils-0.10.1\src\lib.rs C:\Users\andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_macro_utils-0.10.1\src\attrs.rs C:\Users\andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_macro_utils-0.10.1\src\shape.rs C:\Users\andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_macro_utils-0.10.1\src\symbol.rs
+
+C:\Users\andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_macro_utils-0.10.1\src\lib.rs:
+C:\Users\andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_macro_utils-0.10.1\src\attrs.rs:
+C:\Users\andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_macro_utils-0.10.1\src\shape.rs:
+C:\Users\andrew\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_macro_utils-0.10.1\src\symbol.rs:

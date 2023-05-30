@@ -2,9 +2,8 @@
 //! and the game engine Bevy. See README for more information about compiling, running, and using this project. 
 //! Use this documentation to learn more about individual functions and the structure of the program.
 use bevy::prelude::*;
-use bevy::prelude::*;
 
-mod controller;
+
 
 /// Builds the car as a series of joints.
 mod build;

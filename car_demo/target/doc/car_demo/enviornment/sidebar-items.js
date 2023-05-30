@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"fn":["build_environment"]};
+window.SIDEBAR_ITEMS = {"fn":[["build_environment","Builds basic environment with lighting. "]]};
