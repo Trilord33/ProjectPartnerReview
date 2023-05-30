@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"rustc":3249269541886640494,"features":"[\"bytemuck\", \"default\", \"serde\", \"std\"]","target":10373573838773885765,"profile":3735503092003429423,"path":7889763803329284940,"deps":[[323755795445608006,"serde",false,4572728164452808378],[5777885894887263123,"bytemuck",false,9592051984088662326]],"local":[{"CheckDepInfo":{"dep_info":"debug\\.fingerprint\\glam-831cdb456a083e37\\dep-lib-glam"}}],"rustflags":[],"metadata":4763942199903081431,"config":2202906307356721367,"compile_kind":0}
+=======
+{"rustc":3249269541886640494,"features":"[\"bytemuck\", \"default\", \"serde\", \"std\"]","target":10373573838773885765,"profile":3735503092003429423,"path":6425336221688639834,"deps":[[323755795445608006,"serde",false,6104866311032953356],[5777885894887263123,"bytemuck",false,17207665258923056707]],"local":[{"CheckDepInfo":{"dep_info":"debug\\.fingerprint\\glam-831cdb456a083e37\\dep-lib-glam"}}],"rustflags":[],"metadata":4763942199903081431,"config":2202906307356721367,"compile_kind":0}
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43

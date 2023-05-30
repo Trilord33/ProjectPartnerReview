@@ -1,10 +1,24 @@
+//! This is our driving simulation for our 2023 Capstone project. It's an example of how engineering simulations can be created with Rust
+//! and the game engine Bevy. See README for more information about compiling, running, and using this project. 
+//! Use this documentation to learn more about individual functions and the structure of the program.
+use bevy::prelude::*;
 use bevy::prelude::*;
 
 mod controller;
+
+/// Builds the car as a series of joints.
 mod build;
+
 mod camera_az_el;
+/// Builds a simple environment with lighting. 
 mod enviornment;
+
+/// Contains all driving simulation specific physics systems as well as system to handle
+/// controller and keyboard input. Also contains systems to simulate an engine
+/// with a gear box. 
 pub mod physics;
+
+/// Contains the physics schedule, which determines which systems run in which order. 
 mod schedule;
 
 use camera_az_el::camera_builder;
@@ -19,22 +33,24 @@ use physics::{breaking_system, rpm_updater, speed_updater,controller_system};
 use bevy::diagnostic::{Diagnostics, FrameTimeDiagnosticsPlugin};
 use schedule::{create_schedule, physics_schedule, PhysicsSchedule};
 
-// set a larger timestep if the animation lags
+/// Set a larger timestep if the animation lags
 const FIXED_TIMESTEP: f32 = 0.002; // 500 fps!!! ( and it can go faster! )
 
-// Fps Text Struct
+/// Fps Text Struct
 #[derive(Component)]
 struct FpsText;
 
-// RPM Text Struct
+/// RPM Text Struct
 #[derive(Component)]
 pub struct RPMText;
 
-// Speed Text Struct
+/// Speed Text Struct
 #[derive(Component)]
 pub struct SpeedText;
 
-// Main function
+/// Main function. Creates app, sets up window, adds startup systems that build the
+/// car and environment, and specifies the order of other systems including the
+/// physics schedule and UI. 
 fn main() {
     // Create the physics schedule
     let schedule = create_schedule();
@@ -74,6 +90,7 @@ fn main() {
         .run();
 }
 
+/// Sets up the UI, the environment, and the model. 
 pub fn setup_system(
     mut commands: Commands,
     mut meshes: ResMut<Assets<Mesh>>,
@@ -252,6 +269,7 @@ pub fn setup_system(
  * Sources: Bevy cheatbook
 *******************************************/
 
+/// Creates and updates the UI.
 fn create_ui(mut commands: Commands, assets: Res<AssetServer>) {
     //let dash_icon = assets.load("techdash.png");
     
@@ -296,6 +314,7 @@ fn create_ui(mut commands: Commands, assets: Res<AssetServer>) {
  * Output: the UI
  * Sources: Bevy cheatbook
 *******************************************/
+/// Updates the text which displays the current FPS.
 fn fps_updater(diagnostics: Res<Diagnostics>, mut query: Query<&mut Text, With<FpsText>>) {
     for mut text in &mut query {
         if let Some(fps) = diagnostics.get(FrameTimeDiagnosticsPlugin::FPS) {
