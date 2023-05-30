@@ -497,6 +497,39 @@
 <a href="#497" id="497">497</a>
 <a href="#498" id="498">498</a>
 <a href="#499" id="499">499</a>
+<<<<<<< HEAD
+</pre><pre class="rust"><code><span class="comment">/*
+*  CONTROLLER BUTTON MAPPING:
+*       
+        Left Trigger - Shift Up
+        Right Trigger - Shift Down
+*       Left Trigger 2 - 
+*       Right Trigger 2 - Neutral
+*       South Button - speed up
+*       East Button -  Reverse
+*       North Button - Hard Break
+*       West Button -  Break Slow
+        Left Stick - Turn car
+*
+ */
+
+
+
+/*
+*   KEYBOARD BUTTON MAPPING:
+*       
+        W - Speed up
+        A - Turn left
+*       D - Turn Right
+*       Space - Hard Break
+*       LShift - Slow Break
+*       Q - Increase Gear
+*       E - Decrease Gear
+*       R -  Reverse
+        T - Neutral
+*
+ */
+=======
 <a href="#500" id="500">500</a>
 <a href="#501" id="501">501</a>
 <a href="#502" id="502">502</a>
@@ -534,6 +567,7 @@
 ///         T - Neutral
 /// *
 ///  */
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
 
  </span><span class="kw">use </span>std::f32::consts::PI;
  <span class="kw">use </span><span class="kw">crate</span>::RPMText;
@@ -562,8 +596,12 @@
      }
  }
  
+<<<<<<< HEAD
+ <span class="kw">pub fn </span>suspension_system(<span class="kw-2">mut </span>joints: Query&lt;(<span class="kw-2">&amp;mut </span>Joint, <span class="kw-2">&amp;</span>Suspension)&gt;) {
+=======
  <span class="doccomment">/// Updates suspension system.
  </span><span class="kw">pub fn </span>suspension_system(<span class="kw-2">mut </span>joints: Query&lt;(<span class="kw-2">&amp;mut </span>Joint, <span class="kw-2">&amp;</span>Suspension)&gt;) {
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
      <span class="kw">for </span>(<span class="kw-2">mut </span>joint, suspension) <span class="kw">in </span>joints.iter_mut() {
          joint.tau -= suspension.stiffness * joint.q + suspension.damping * joint.qd;
      }
@@ -596,8 +634,12 @@
      }
  }
  
+<<<<<<< HEAD
+ <span class="attr">#[derive(Component)]
+=======
  <span class="doccomment">/// Holds information about the engine. 
  </span><span class="attr">#[derive(Component)]
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
  </span><span class="kw">pub struct </span>Engine 
  {
      rpms: f32,
@@ -621,8 +663,12 @@
  
  <span class="attr">#[derive(Component)]
  </span><span class="kw">pub struct </span>Controller;
+<<<<<<< HEAD
+ <span class="kw">pub fn </span>controller_system(
+=======
  <span class="doccomment">/// Handles controller and keyboard input for forward motion (gas pedal) and gear changing. 
  </span><span class="kw">pub fn </span>controller_system(
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
      <span class="kw-2">mut </span>joints: Query&lt;(<span class="kw-2">&amp;mut </span>Joint, <span class="kw-2">&amp;</span>DrivenWheel,<span class="kw-2">&amp;mut </span>Engine )&gt;,
      key: Res&lt;Input&lt;KeyCode&gt;&gt;,keys: Res&lt;Input&lt;KeyCode&gt;&gt;,
      gamepads: Res&lt;Gamepads&gt;, 
@@ -744,7 +790,12 @@
  
  }
  
+<<<<<<< HEAD
+ <span class="comment">// a very simple tire model. Not very realistic, but it works well enough for this demo.
+ // it&#39;s also messy, but I/we can clean it up later
+=======
  <span class="doccomment">/// A very simple tire model. Not very realistic, but it works well enough.
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
  </span><span class="kw">pub fn </span>tire_contact_system(<span class="kw-2">mut </span>joints: Query&lt;(<span class="kw-2">&amp;mut </span>Joint, <span class="kw-2">&amp;</span>TireContact)&gt;) {
      <span class="kw">for </span>(<span class="kw-2">mut </span>joint, contact) <span class="kw">in </span>joints.iter_mut() {
          <span class="comment">// x0 is the inverse of the joint transform (used several times later)
@@ -817,8 +868,12 @@
  
  <span class="attr">#[derive(Component)]
  </span><span class="kw">pub struct </span>Steering;
+<<<<<<< HEAD
+ <span class="kw">pub fn </span>steering_system(keys: Res&lt;Input&lt;KeyCode&gt;&gt;, <span class="kw-2">mut </span>joints: Query&lt;(<span class="kw-2">&amp;mut </span>Joint, <span class="kw-2">&amp;</span>Steering)&gt;, time: Res&lt;Time&gt;, gamepads: Res&lt;Gamepads&gt;, button_axes: Res&lt;Axis&lt;GamepadButton&gt;&gt;,axes: Res&lt;Axis&lt;GamepadAxis&gt;&gt;) {
+=======
  <span class="doccomment">/// Handles keyboard and controller input for steering the car.
  </span><span class="kw">pub fn </span>steering_system(keys: Res&lt;Input&lt;KeyCode&gt;&gt;, <span class="kw-2">mut </span>joints: Query&lt;(<span class="kw-2">&amp;mut </span>Joint, <span class="kw-2">&amp;</span>Steering)&gt;, time: Res&lt;Time&gt;, gamepads: Res&lt;Gamepads&gt;, button_axes: Res&lt;Axis&lt;GamepadButton&gt;&gt;,axes: Res&lt;Axis&lt;GamepadAxis&gt;&gt;) {
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
      
      <span class="comment">/* original  */
      // let t = time.elapsed_seconds();
@@ -856,8 +911,12 @@
  
  <span class="attr">#[derive(Component)]
  </span><span class="kw">pub struct </span>Breaking;
+<<<<<<< HEAD
+ <span class="kw">pub fn </span>breaking_system(<span class="kw-2">mut </span>joints: Query&lt;(<span class="kw-2">&amp;mut </span>Joint, <span class="kw-2">&amp;</span>DrivenWheel)&gt;, key: Res&lt;Input&lt;KeyCode&gt;&gt;,keys: Res&lt;Input&lt;KeyCode&gt;&gt;,gamepads: Res&lt;Gamepads&gt;, button_inputs: Res&lt;Input&lt;GamepadButton&gt;&gt;){
+=======
  <span class="doccomment">/// Handles keyboard and controller input for hard and soft braking. 
  </span><span class="kw">pub fn </span>breaking_system(<span class="kw-2">mut </span>joints: Query&lt;(<span class="kw-2">&amp;mut </span>Joint, <span class="kw-2">&amp;</span>DrivenWheel)&gt;, key: Res&lt;Input&lt;KeyCode&gt;&gt;,keys: Res&lt;Input&lt;KeyCode&gt;&gt;,gamepads: Res&lt;Gamepads&gt;, button_inputs: Res&lt;Input&lt;GamepadButton&gt;&gt;){
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
  
      <span class="kw">let </span><span class="kw-2">mut </span>breaking = <span class="number">0.0</span>;
      <span class="kw">if </span>key.pressed(KeyCode::Space)
@@ -896,11 +955,15 @@
  
  <span class="attr">#[derive(Component)]
  </span><span class="kw">pub struct </span>DrivenWheel;
+<<<<<<< HEAD
+ <span class="kw">pub fn </span>driven_wheel_system(<span class="kw-2">mut </span>joints: Query&lt;(<span class="kw-2">&amp;mut </span>Joint, <span class="kw-2">&amp;</span>DrivenWheel, <span class="kw-2">&amp;mut </span>Engine)&gt;) {
+=======
  <span class="doccomment">/// Functions like an engine, controlling the driven wheels. Engine RPMs are matched to torque and
 /// gear ratio is found from current gear. Torque, gear ratio, and a &quot;differential&quot; constant combine
 /// to create a speed target for the car. If the car is in neutral, this is disregarded. If the car
 /// is in reverse, this is inverted. Joint values are updated to reflect the new speed target.
  </span><span class="kw">pub fn </span>driven_wheel_system(<span class="kw-2">mut </span>joints: Query&lt;(<span class="kw-2">&amp;mut </span>Joint, <span class="kw-2">&amp;</span>DrivenWheel, <span class="kw-2">&amp;mut </span>Engine)&gt;) {
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
  
      <span class="comment">/* added my me below - allison */
      </span><span class="kw">let </span><span class="kw-2">mut </span>speed_target = <span class="number">0.0</span>;
@@ -976,7 +1039,10 @@
   * Output: the UI
   * Sources: Bevy cheatbook
  *******************************************/
+<<<<<<< HEAD
+=======
  </span><span class="doccomment">/// Updates the text which displays the current RPM.
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
  </span><span class="kw">pub fn </span>rpm_updater(<span class="kw-2">mut </span>car_query: Query&lt;<span class="kw-2">&amp;mut </span>Engine&gt;, <span class="kw-2">mut </span>query: Query&lt;<span class="kw-2">&amp;mut </span>Text, With&lt;RPMText&gt;&gt;) {
      <span class="kw">for </span><span class="kw-2">mut </span>text <span class="kw">in </span><span class="kw-2">&amp;mut </span>query  {
          <span class="kw">for </span>car <span class="kw">in </span><span class="kw-2">&amp;mut </span>car_query{
@@ -996,8 +1062,15 @@
   * Output: the UI
   * Sources: Bevy cheatbook
  *******************************************/
+<<<<<<< HEAD
+=======
  </span><span class="doccomment">/// Updates the text which displays the current speed.
+<<<<<<< HEAD
  </span><span class="kw">pub fn </span>speed_updater(<span class="kw-2">mut </span>joints: Query&lt;<span class="kw-2">&amp;mut </span>Joint&gt;, <span class="kw-2">mut </span>query: Query&lt;<span class="kw-2">&amp;mut </span>Text, With&lt;SpeedText&gt;&gt;) {
+=======
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
+ </span><span class="kw">pub fn </span>speed_updater(<span class="kw-2">mut </span>joints: Query&lt;(<span class="kw-2">&amp;mut </span>Joint)&gt;, <span class="kw-2">mut </span>query: Query&lt;<span class="kw-2">&amp;mut </span>Text, With&lt;SpeedText&gt;&gt;) {
+>>>>>>> c2d6dc236c53139cb1631495f4ee8dff8b3bb18c
      <span class="comment">//for mut text in &amp;mut query  {
      //    for car in &amp;mut car_query{
      //        let value = car.qd.abs();

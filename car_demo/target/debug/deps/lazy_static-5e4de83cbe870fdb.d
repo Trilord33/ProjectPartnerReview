@@ -1,6 +1,15 @@
+<<<<<<< HEAD
+D:\SKOOKS\capstone\ProjectPartnerReview\car_demo\target\debug\deps\lazy_static-5e4de83cbe870fdb.rmeta: C:\Users\j3r3m\.cargo\registry\src\github.com-1ecc6299db9ec823\lazy_static-1.4.0\src\lib.rs C:\Users\j3r3m\.cargo\registry\src\github.com-1ecc6299db9ec823\lazy_static-1.4.0\src\inline_lazy.rs
+
+D:\SKOOKS\capstone\ProjectPartnerReview\car_demo\target\debug\deps\lazy_static-5e4de83cbe870fdb.d: C:\Users\j3r3m\.cargo\registry\src\github.com-1ecc6299db9ec823\lazy_static-1.4.0\src\lib.rs C:\Users\j3r3m\.cargo\registry\src\github.com-1ecc6299db9ec823\lazy_static-1.4.0\src\inline_lazy.rs
+
+C:\Users\j3r3m\.cargo\registry\src\github.com-1ecc6299db9ec823\lazy_static-1.4.0\src\lib.rs:
+C:\Users\j3r3m\.cargo\registry\src\github.com-1ecc6299db9ec823\lazy_static-1.4.0\src\inline_lazy.rs:
+=======
 C:\Users\allis\Documents\GitHub\ProjectPartnerReview\car_demo\target\debug\deps\lazy_static-5e4de83cbe870fdb.rmeta: C:\Users\allis\.cargo\registry\src\github.com-1ecc6299db9ec823\lazy_static-1.4.0\src\lib.rs C:\Users\allis\.cargo\registry\src\github.com-1ecc6299db9ec823\lazy_static-1.4.0\src\inline_lazy.rs
 
 C:\Users\allis\Documents\GitHub\ProjectPartnerReview\car_demo\target\debug\deps\lazy_static-5e4de83cbe870fdb.d: C:\Users\allis\.cargo\registry\src\github.com-1ecc6299db9ec823\lazy_static-1.4.0\src\lib.rs C:\Users\allis\.cargo\registry\src\github.com-1ecc6299db9ec823\lazy_static-1.4.0\src\inline_lazy.rs
 
 C:\Users\allis\.cargo\registry\src\github.com-1ecc6299db9ec823\lazy_static-1.4.0\src\lib.rs:
 C:\Users\allis\.cargo\registry\src\github.com-1ecc6299db9ec823\lazy_static-1.4.0\src\inline_lazy.rs:
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43

@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+D:\SKOOKS\capstone\ProjectPartnerReview\car_demo\target\debug\deps\bevy_render_macros-e307f256eaf2ec81.dll: C:\Users\j3r3m\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\lib.rs C:\Users\j3r3m\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\as_bind_group.rs C:\Users\j3r3m\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\extract_component.rs C:\Users\j3r3m\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\extract_resource.rs
+
+D:\SKOOKS\capstone\ProjectPartnerReview\car_demo\target\debug\deps\bevy_render_macros-e307f256eaf2ec81.d: C:\Users\j3r3m\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\lib.rs C:\Users\j3r3m\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\as_bind_group.rs C:\Users\j3r3m\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\extract_component.rs C:\Users\j3r3m\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\extract_resource.rs
+
+C:\Users\j3r3m\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\lib.rs:
+C:\Users\j3r3m\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\as_bind_group.rs:
+C:\Users\j3r3m\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\extract_component.rs:
+C:\Users\j3r3m\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\extract_resource.rs:
+=======
 C:\Users\allis\Documents\GitHub\ProjectPartnerReview\car_demo\target\debug\deps\bevy_render_macros-e307f256eaf2ec81.dll: C:\Users\allis\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\lib.rs C:\Users\allis\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\as_bind_group.rs C:\Users\allis\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\extract_component.rs C:\Users\allis\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\extract_resource.rs
 
 C:\Users\allis\Documents\GitHub\ProjectPartnerReview\car_demo\target\debug\deps\bevy_render_macros-e307f256eaf2ec81.d: C:\Users\allis\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\lib.rs C:\Users\allis\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\as_bind_group.rs C:\Users\allis\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\extract_component.rs C:\Users\allis\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\extract_resource.rs
@@ -6,3 +16,4 @@ C:\Users\allis\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macro
 C:\Users\allis\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\as_bind_group.rs:
 C:\Users\allis\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\extract_component.rs:
 C:\Users\allis\.cargo\registry\src\github.com-1ecc6299db9ec823\bevy_render_macros-0.10.1\src\extract_resource.rs:
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43

@@ -1,3 +1,11 @@
 (function() {var implementors = {
+<<<<<<< HEAD
 "car_demo":[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.67.1/core/marker/trait.StructuralPartialEq.html\" title=\"trait core::marker::StructuralPartialEq\">StructuralPartialEq</a> for <a class=\"struct\" href=\"car_demo/schedule/struct.PhysicsSchedule.html\" title=\"struct car_demo::schedule::PhysicsSchedule\">PhysicsSchedule</a>"],["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.67.1/core/marker/trait.StructuralPartialEq.html\" title=\"trait core::marker::StructuralPartialEq\">StructuralPartialEq</a> for <a class=\"enum\" href=\"car_demo/schedule/enum.PhysicsSet.html\" title=\"enum car_demo::schedule::PhysicsSet\">PhysicsSet</a>"]]
+=======
+<<<<<<< HEAD
+"car_demo":[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.69.0/core/marker/trait.StructuralPartialEq.html\" title=\"trait core::marker::StructuralPartialEq\">StructuralPartialEq</a> for <a class=\"struct\" href=\"car_demo/schedule/struct.PhysicsSchedule.html\" title=\"struct car_demo::schedule::PhysicsSchedule\">PhysicsSchedule</a>"],["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.69.0/core/marker/trait.StructuralPartialEq.html\" title=\"trait core::marker::StructuralPartialEq\">StructuralPartialEq</a> for <a class=\"enum\" href=\"car_demo/schedule/enum.PhysicsSet.html\" title=\"enum car_demo::schedule::PhysicsSet\">PhysicsSet</a>"]]
+=======
+"car_demo":[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.69.0/core/marker/trait.StructuralPartialEq.html\" title=\"trait core::marker::StructuralPartialEq\">StructuralPartialEq</a> for <a class=\"enum\" href=\"car_demo/schedule/enum.PhysicsSet.html\" title=\"enum car_demo::schedule::PhysicsSet\">PhysicsSet</a>"],["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.69.0/core/marker/trait.StructuralPartialEq.html\" title=\"trait core::marker::StructuralPartialEq\">StructuralPartialEq</a> for <a class=\"struct\" href=\"car_demo/schedule/struct.PhysicsSchedule.html\" title=\"struct car_demo::schedule::PhysicsSchedule\">PhysicsSchedule</a>"]]
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
+>>>>>>> c2d6dc236c53139cb1631495f4ee8dff8b3bb18c
 };if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

@@ -66,8 +66,11 @@
 <a href="#66" id="66">66</a>
 <a href="#67" id="67">67</a>
 <a href="#68" id="68">68</a>
+<<<<<<< HEAD
+=======
 <a href="#69" id="69">69</a>
 <a href="#70" id="70">70</a>
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
 </pre><pre class="rust"><code><span class="kw">use </span><span class="kw">crate</span>::physics::{
     driven_wheel_system, steering_system, suspension_system, tire_contact_system, breaking_system
 };
@@ -77,7 +80,11 @@
 <span class="kw">use </span>rbda_bevy::structure::{apply_external_forces, loop_1, loop_23};
 <span class="kw">use </span>rbda_bevy::system::integrate_joint_state;
 
+<<<<<<< HEAD
+<span class="comment">// Define the physics schedule which will be run in the fixed timestep loop
+=======
 <span class="doccomment">/// Define the physics schedule which will be run in the fixed timestep loop
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
 </span><span class="attr">#[derive(ScheduleLabel, Debug, Hash, PartialEq, Eq, Clone)]
 </span><span class="kw">pub struct </span>PhysicsSchedule;
 
@@ -85,7 +92,11 @@
     world.run_schedule(PhysicsSchedule);
 }
 
+<<<<<<< HEAD
+<span class="comment">// Define physics system sets, which are used to group systems together, and define the order in which they are run
+=======
 <span class="doccomment">/// Define physics system sets, which are used to group systems together, and define the order in which they are run
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
 </span><span class="attr">#[derive(Debug, Hash, PartialEq, Eq, Clone, SystemSet)]
 </span><span class="kw">enum </span>PhysicsSet {
     Initialize,
@@ -93,9 +104,13 @@
     Finalize,
 }
 
+<<<<<<< HEAD
+<span class="kw">pub fn </span>create_schedule() -&gt; Schedule {
+=======
 <span class="doccomment">/// Creates physics schedule which defines the order in which various physics and driving
 /// systems are run. 
 </span><span class="kw">pub fn </span>create_schedule() -&gt; Schedule {
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
     <span class="comment">// create the physics schedule
     </span><span class="kw">let </span><span class="kw-2">mut </span>phys_schedule = Schedule::new();
     phys_schedule

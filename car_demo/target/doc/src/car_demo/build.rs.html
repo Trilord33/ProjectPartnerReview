@@ -364,6 +364,15 @@
 <a href="#364" id="364">364</a>
 <a href="#365" id="365">365</a>
 <a href="#366" id="366">366</a>
+<<<<<<< HEAD
+<a href="#367" id="367">367</a>
+<a href="#368" id="368">368</a>
+<a href="#369" id="369">369</a>
+<a href="#370" id="370">370</a>
+<a href="#371" id="371">371</a>
+<a href="#372" id="372">372</a>
+=======
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
 </pre><pre class="rust"><code><span class="kw">use </span>bevy::ecs::system::EntityCommands;
 <span class="kw">use </span>bevy::prelude::<span class="kw-2">*</span>;
 
@@ -372,7 +381,17 @@
 
 <span class="kw">use </span><span class="kw">crate</span>::physics::{DrivenWheel, Steering, Suspension, TireContact, Engine};
 
+<<<<<<< HEAD
+
+<span class="comment">// #[derive(Component)]
+// pub struct FollowCamera
+// {
+// }
+
+</span><span class="doccomment">///initializes 3rd person camera, pulls 3D models from assets folder, sets coordinates for model transformations, creates parent hierarchy (chassis --&gt; suspension --&gt; wheels)
+=======
 <span class="doccomment">/// Builds the car model, utilizing other functions to create the chassis, suspensions, and wheels. 
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
 </span><span class="kw">pub fn </span>build_model(
     commands: <span class="kw-2">&amp;mut </span>Commands,
     meshes: <span class="kw-2">&amp;mut </span>ResMut&lt;Assets&lt;Mesh&gt;&gt;,
@@ -446,7 +465,11 @@
     }
 }
 
+<<<<<<< HEAD
+<span class="doccomment">/// build the chassis from a series of joints
+=======
 <span class="doccomment">/// Builds the chassis from a series of joints.
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
 </span><span class="kw">fn </span>build_chassis(
     commands: <span class="kw-2">&amp;mut </span>Commands,
     assets: <span class="kw-2">&amp;</span>Res&lt;AssetServer&gt;,
@@ -534,7 +557,11 @@
     </span>(rx_id, rz_id)
 }
 
+<<<<<<< HEAD
+<span class="doccomment">/// similar to build_suspension, but with an rz joint, and no mesh and no contact
+=======
 <span class="doccomment">/// Builds steering system. Similar to build_suspension, but with an rz joint, and no mesh and no contact.
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
 </span><span class="kw">fn </span>build_steer(
     commands: <span class="kw-2">&amp;mut </span>Commands,
     location: [f32; <span class="number">3</span>],
@@ -566,7 +593,11 @@
     </span>steering_id
 }
 
+<<<<<<< HEAD
+<span class="doccomment">///creates RBDA joints to connect wheel to cars (allows the car to lean to the side fron g-force simulation)
+=======
 <span class="doccomment">/// Builds suspension.
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
 </span><span class="kw">fn </span>build_suspension(
     commands: <span class="kw-2">&amp;mut </span>Commands,
     location: [f32; <span class="number">3</span>],
@@ -604,7 +635,11 @@
     susp_e.id()
 }
 
+<<<<<<< HEAD
+<span class="doccomment">///assigns wheel models into the scene to their parented suspension
+=======
 <span class="doccomment">/// Builds the wheels.
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
 </span><span class="kw">fn </span>build_wheel(
     commands: <span class="kw-2">&amp;mut </span>Commands,
     meshes: <span class="kw-2">&amp;mut </span>ResMut&lt;Assets&lt;Mesh&gt;&gt;,
@@ -675,20 +710,32 @@
     wheel_id
 }
 
+<<<<<<< HEAD
+<span class="doccomment">///creates stiffness and damping of suspension systems
+=======
 <span class="doccomment">/// Adds a tire contact to an entity.
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
 </span><span class="kw">fn </span>add_tire_contact(entity: <span class="kw-2">&amp;mut </span>EntityCommands) {
     <span class="kw">let </span>stiffness = <span class="number">1000. </span>* <span class="number">9.81 </span>/ <span class="number">4. </span>/ <span class="number">0.005</span>;
     <span class="kw">let </span>damping = <span class="number">0.25 </span>* <span class="number">2. </span>* (<span class="number">1000.0_f32 </span>/ <span class="number">4. </span>* stiffness).sqrt();
     entity.insert(TireContact::new(<span class="number">0.325</span>, stiffness, damping, <span class="number">0.2</span>, <span class="number">0.5</span>));
 }
 
+<<<<<<< HEAD
+<span class="doccomment">/// basic add engine function that could be expanded and customized
+=======
 <span class="doccomment">/// Basic add engine function that adds an engine to an entity.
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
 </span><span class="kw">fn </span>add_engine(entity: <span class="kw-2">&amp;mut </span>EntityCommands)
 {
     entity.insert(Engine::new(<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>));
 }
 
+<<<<<<< HEAD
+<span class="doccomment">///spawns car chassis into scene and apply transformations
+=======
 <span class="doccomment">/// Adds car mesh. 
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
 </span><span class="kw">fn </span>add_car_mesh(commands: <span class="kw-2">&amp;mut </span>Commands, chassis_joint_id: Entity, assets: <span class="kw-2">&amp;</span>Res&lt;AssetServer&gt;) {
     <span class="kw">let </span>car_mesh = assets.load(<span class="string">&quot;AE86_BODY.glb#Scene0&quot;</span>);
     <span class="kw">let </span><span class="kw-2">mut </span>car_mesh_entity = commands.spawn(SceneBundle {
@@ -706,7 +753,11 @@
     car_mesh_entity.set_parent(chassis_joint_id);
 }
 
+<<<<<<< HEAD
+<span class="doccomment">///used in build_wheel() to spawn wheels to scene and apply transformations to each wheel
+=======
 <span class="doccomment">/// Adds wheel meshes.
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
 </span><span class="kw">fn </span>add_wheel_scene(
     mesh_name: String,
     commands: <span class="kw-2">&amp;mut </span>Commands,

@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+{"rustc":3249269541886640494,"features":"[]","target":17489315549967879042,"profile":9753404505428345930,"path":7899486577586933211,"deps":[[8445160911421373662,"encase_derive_impl",false,17214010894939955915]],"local":[{"CheckDepInfo":{"dep_info":"debug\\.fingerprint\\encase_derive-5214abad4afadde7\\dep-lib-encase_derive"}}],"rustflags":[],"metadata":16081106574476198809,"config":2202906307356721367,"compile_kind":0}
+=======
 {"rustc":3249269541886640494,"features":"[]","target":17489315549967879042,"profile":9753404505428345930,"path":13012810785479253123,"deps":[[8445160911421373662,"encase_derive_impl",false,4626657377738986832]],"local":[{"CheckDepInfo":{"dep_info":"debug\\.fingerprint\\encase_derive-5214abad4afadde7\\dep-lib-encase_derive"}}],"rustflags":[],"metadata":16081106574476198809,"config":2202906307356721367,"compile_kind":0}
+>>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
