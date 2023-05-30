@@ -2,6 +2,7 @@ use std::f32::consts::PI;
 
 use bevy::prelude::*;
 
+///spawns center environment light and temporary checkerboard floor in assets folder
 pub fn build_environment(
     commands: &mut Commands,
     meshes: &mut ResMut<Assets<Mesh>>,

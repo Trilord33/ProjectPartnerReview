@@ -12,6 +12,7 @@ use crate::physics::{DrivenWheel, Steering, Suspension, TireContact, Engine};
 // {
 // }
 
+///initializes 3rd person camera, pulls 3D models from assets folder, sets coordinates for model transformations, creates parent hierarchy (chassis --> suspension --> wheels)
 pub fn build_model(
     commands: &mut Commands,
     meshes: &mut ResMut<Assets<Mesh>>,
@@ -85,7 +86,7 @@ pub fn build_model(
     }
 }
 
-// build the chassis from a series of joints
+/// build the chassis from a series of joints
 fn build_chassis(
     commands: &mut Commands,
     assets: &Res<AssetServer>,
@@ -173,7 +174,7 @@ fn build_chassis(
     (rx_id, rz_id)
 }
 
-// similar to build_suspension, but with an rz joint, and no mesh and no contact
+/// similar to build_suspension, but with an rz joint, and no mesh and no contact
 fn build_steer(
     commands: &mut Commands,
     location: [f32; 3],
@@ -205,6 +206,7 @@ fn build_steer(
     steering_id
 }
 
+///creates RBDA joints to connect wheel to cars (allows the car to lean to the side fron g-force simulation)
 fn build_suspension(
     commands: &mut Commands,
     location: [f32; 3],
@@ -242,6 +244,7 @@ fn build_suspension(
     susp_e.id()
 }
 
+///assigns wheel models into the scene to their parented suspension
 fn build_wheel(
     commands: &mut Commands,
     meshes: &mut ResMut<Assets<Mesh>>,
@@ -312,18 +315,20 @@ fn build_wheel(
     wheel_id
 }
 
+///creates stiffness and damping of suspension systems
 fn add_tire_contact(entity: &mut EntityCommands) {
     let stiffness = 1000. * 9.81 / 4. / 0.005;
     let damping = 0.25 * 2. * (1000.0_f32 / 4. * stiffness).sqrt();
     entity.insert(TireContact::new(0.325, stiffness, damping, 0.2, 0.5));
 }
 
-/* basic add engine function that could be expanded and customized */
+/// basic add engine function that could be expanded and customized
 fn add_engine(entity: &mut EntityCommands)
 {
     entity.insert(Engine::new(0.0, 0.0, 0.0));
 }
 
+///spawns car chassis into scene and apply transformations
 fn add_car_mesh(commands: &mut Commands, chassis_joint_id: Entity, assets: &Res<AssetServer>) {
     let car_mesh = assets.load("AE86_BODY.glb#Scene0");
     let mut car_mesh_entity = commands.spawn(SceneBundle {
@@ -341,6 +346,7 @@ fn add_car_mesh(commands: &mut Commands, chassis_joint_id: Entity, assets: &Res<
     car_mesh_entity.set_parent(chassis_joint_id);
 }
 
+///used in build_wheel() to spawn wheels to scene and apply transformations to each wheel
 fn add_wheel_scene(
     mesh_name: String,
     commands: &mut Commands,
