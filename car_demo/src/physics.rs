@@ -1,34 +1,32 @@
-/*
-*  CONTROLLER BUTTON MAPPING:
-*       
-        Left Trigger - Shift Up
-        Right Trigger - Shift Down
-*       Left Trigger 2 - 
-*       Right Trigger 2 - Neutral
-*       South Button - speed up
-*       East Button -  Reverse
-*       North Button - Hard Break
-*       West Button -  Break Slow
-        Left Stick - Turn car
-*
- */
+/// /*
+// *  CONTROLLER BUTTON MAPPING:
+/// *       
+///         Left Trigger - Shift Up
+///         Right Trigger - Shift Down
+/// *       Left Trigger 2 - 
+/// *       Right Trigger 2 - Neutral
+/// *       South Button - speed up
+/// *       East Button -  Reverse
+/// *       North Button - Hard Break
+/// *       West Button -  Break Slow
+///         Left Stick - Turn car
+/// *
+///  */
 
-
-
-/*
-*   KEYBOARD BUTTON MAPPING:
-*       
-        W - Speed up
-        A - Turn left
-*       D - Turn Right
-*       Space - Hard Break
-*       LShift - Slow Break
-*       Q - Increase Gear
-*       E - Decrease Gear
-*       R -  Reverse
-        T - Neutral
-*
- */
+/// /*
+/// *   KEYBOARD BUTTON MAPPING:
+/// *       
+///         W - Speed up
+///         A - Turn left
+/// *       D - Turn Right
+/// *       Space - Hard Break
+/// *       LShift - Slow Break
+/// *       Q - Increase Gear
+/// *       E - Decrease Gear
+/// *       R -  Reverse
+///         T - Neutral
+/// *
+///  */
 
  use std::f32::consts::PI;
  use crate::RPMText;
@@ -57,6 +55,7 @@
      }
  }
  
+ /// Updates suspension system.
  pub fn suspension_system(mut joints: Query<(&mut Joint, &Suspension)>) {
      for (mut joint, suspension) in joints.iter_mut() {
          joint.tau -= suspension.stiffness * joint.q + suspension.damping * joint.qd;
@@ -90,6 +89,7 @@
      }
  }
  
+ /// Holds information about the engine. 
  #[derive(Component)]
  pub struct Engine 
  {
@@ -114,6 +114,7 @@
  
  #[derive(Component)]
  pub struct Controller;
+ /// Handles controller and keyboard input for forward motion (gas pedal) and gear changing. 
  pub fn controller_system(
      mut joints: Query<(&mut Joint, &DrivenWheel,&mut Engine )>,
      key: Res<Input<KeyCode>>,keys: Res<Input<KeyCode>>,
@@ -236,8 +237,7 @@
  
  }
  
- // a very simple tire model. Not very realistic, but it works well enough for this demo.
- // it's also messy, but I/we can clean it up later
+ /// A very simple tire model. Not very realistic, but it works well enough.
  pub fn tire_contact_system(mut joints: Query<(&mut Joint, &TireContact)>) {
      for (mut joint, contact) in joints.iter_mut() {
          // x0 is the inverse of the joint transform (used several times later)
@@ -310,6 +310,7 @@
  
  #[derive(Component)]
  pub struct Steering;
+ /// Handles keyboard and controller input for steering the car.
  pub fn steering_system(keys: Res<Input<KeyCode>>, mut joints: Query<(&mut Joint, &Steering)>, time: Res<Time>, gamepads: Res<Gamepads>, button_axes: Res<Axis<GamepadButton>>,axes: Res<Axis<GamepadAxis>>) {
      
      /* original  */
@@ -348,6 +349,7 @@
  
  #[derive(Component)]
  pub struct Breaking;
+ /// Handles keyboard and controller input for hard and soft braking. 
  pub fn breaking_system(mut joints: Query<(&mut Joint, &DrivenWheel)>, key: Res<Input<KeyCode>>,keys: Res<Input<KeyCode>>,gamepads: Res<Gamepads>, button_inputs: Res<Input<GamepadButton>>){
  
      let mut breaking = 0.0;
@@ -387,6 +389,10 @@
  
  #[derive(Component)]
  pub struct DrivenWheel;
+ /// Functions like an engine, controlling the driven wheels. Engine RPMs are matched to torque and
+/// gear ratio is found from current gear. Torque, gear ratio, and a "differential" constant combine
+/// to create a speed target for the car. If the car is in neutral, this is disregarded. If the car
+/// is in reverse, this is inverted. Joint values are updated to reflect the new speed target.
  pub fn driven_wheel_system(mut joints: Query<(&mut Joint, &DrivenWheel, &mut Engine)>) {
  
      /* added my me below - allison */
@@ -463,6 +469,7 @@
   * Output: the UI
   * Sources: Bevy cheatbook
  *******************************************/
+ /// Updates the text which displays the current RPM.
  pub fn rpm_updater(mut car_query: Query<&mut Engine>, mut query: Query<&mut Text, With<RPMText>>) {
      for mut text in &mut query  {
          for car in &mut car_query{
@@ -482,6 +489,7 @@
   * Output: the UI
   * Sources: Bevy cheatbook
  *******************************************/
+ /// Updates the text which displays the current speed.
  pub fn speed_updater(mut joints: Query<(&mut Joint)>, mut query: Query<&mut Text, With<SpeedText>>) {
      //for mut text in &mut query  {
      //    for car in &mut car_query{
