@@ -2,11 +2,7 @@ use std::f32::consts::PI;
 
 use bevy::prelude::*;
 
-<<<<<<< HEAD
 ///spawns center environment light and temporary checkerboard floor in assets folder
-=======
-/// Builds basic environment with lighting. 
->>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
 pub fn build_environment(
     commands: &mut Commands,
     meshes: &mut ResMut<Assets<Mesh>>,
