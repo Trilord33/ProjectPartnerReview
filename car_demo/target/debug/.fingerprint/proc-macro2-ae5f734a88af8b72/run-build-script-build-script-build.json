@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-{"rustc":3249269541886640494,"features":"","target":0,"profile":0,"path":0,"deps":[[5276720202397113457,"build_script_build",false,9318702615893940474]],"local":[{"RerunIfChanged":{"output":"debug\\build\\proc-macro2-ae5f734a88af8b72\\output","paths":["build.rs"]}}],"rustflags":[],"metadata":0,"config":0,"compile_kind":0}
-=======
-{"rustc":3249269541886640494,"features":"","target":0,"profile":0,"path":0,"deps":[[5276720202397113457,"build_script_build",false,6670997117052563039]],"local":[{"RerunIfChanged":{"output":"debug\\build\\proc-macro2-ae5f734a88af8b72\\output","paths":["build.rs"]}}],"rustflags":[],"metadata":0,"config":0,"compile_kind":0}
->>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43

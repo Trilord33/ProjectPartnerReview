@@ -1,8 +1,0 @@
-cargo:rerun-if-changed=build/main.rs
-<<<<<<< HEAD
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=D:\SKOOKS\capstone\ProjectPartnerReview\car_demo\target\debug\build\typenum-36f8dc7a9f6a5cae\out\consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=D:\SKOOKS\capstone\ProjectPartnerReview\car_demo\target\debug\build\typenum-36f8dc7a9f6a5cae\out\op.rs
-=======
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=C:\Users\allis\Documents\GitHub\ProjectPartnerReview\car_demo\target\debug\build\typenum-36f8dc7a9f6a5cae\out\consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=C:\Users\allis\Documents\GitHub\ProjectPartnerReview\car_demo\target\debug\build\typenum-36f8dc7a9f6a5cae\out\op.rs
->>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43

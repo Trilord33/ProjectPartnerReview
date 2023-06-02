@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-{"rustc":3249269541886640494,"features":"","target":0,"profile":0,"path":0,"deps":[[3970270037858789294,"build_script_build",false,10740779763997650020]],"local":[{"RerunIfChanged":{"output":"debug\\build\\winit-4e5b38a43aef9ca2\\output","paths":["build.rs","wayland_protocols"]}}],"rustflags":[],"metadata":0,"config":0,"compile_kind":0}
-=======
-{"rustc":3249269541886640494,"features":"","target":0,"profile":0,"path":0,"deps":[[3970270037858789294,"build_script_build",false,9165433321131168055]],"local":[{"RerunIfChanged":{"output":"debug\\build\\winit-4e5b38a43aef9ca2\\output","paths":["build.rs","wayland_protocols"]}}],"rustflags":[],"metadata":0,"config":0,"compile_kind":0}
->>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43

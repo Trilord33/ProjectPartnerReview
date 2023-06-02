@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-{"rustc":3249269541886640494,"features":"[]","target":5402702367792411983,"profile":3735503092003429423,"path":7106706239899237635,"deps":[[13136722485637930166,"glam",false,18390709853183209669]],"local":[{"CheckDepInfo":{"dep_info":"debug\\.fingerprint\\bevy_mikktspace-755c0d30c0af91ea\\dep-lib-bevy_mikktspace"}}],"rustflags":[],"metadata":3226809195609725467,"config":2202906307356721367,"compile_kind":0}
-=======
-{"rustc":3249269541886640494,"features":"[]","target":5402702367792411983,"profile":3735503092003429423,"path":12001836176288182322,"deps":[[13136722485637930166,"glam",false,13713131203843037129]],"local":[{"CheckDepInfo":{"dep_info":"debug\\.fingerprint\\bevy_mikktspace-755c0d30c0af91ea\\dep-lib-bevy_mikktspace"}}],"rustflags":[],"metadata":3226809195609725467,"config":2202906307356721367,"compile_kind":0}
->>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43

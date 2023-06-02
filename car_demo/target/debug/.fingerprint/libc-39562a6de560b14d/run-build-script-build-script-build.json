@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-{"rustc":3249269541886640494,"features":"","target":0,"profile":0,"path":0,"deps":[[5405497940822227473,"build_script_build",false,2106808273859869168]],"local":[{"RerunIfChanged":{"output":"debug\\build\\libc-39562a6de560b14d\\output","paths":["build.rs"]}}],"rustflags":[],"metadata":0,"config":0,"compile_kind":0}
-=======
-{"rustc":3249269541886640494,"features":"","target":0,"profile":0,"path":0,"deps":[[5405497940822227473,"build_script_build",false,16081898375068746557]],"local":[{"RerunIfChanged":{"output":"debug\\build\\libc-39562a6de560b14d\\output","paths":["build.rs"]}}],"rustflags":[],"metadata":0,"config":0,"compile_kind":0}
->>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43

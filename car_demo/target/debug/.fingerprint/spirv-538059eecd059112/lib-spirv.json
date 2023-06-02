@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-{"rustc":3249269541886640494,"features":"[]","target":8050488081722200035,"profile":3735503092003429423,"path":11947005098078964706,"deps":[[8121635694596382552,"num_traits",false,3162838412186275836],[14051957667571541382,"bitflags",false,15693094312987391802]],"local":[{"CheckDepInfo":{"dep_info":"debug\\.fingerprint\\spirv-538059eecd059112\\dep-lib-spirv"}}],"rustflags":[],"metadata":12433600939443802614,"config":2202906307356721367,"compile_kind":0}
-=======
-{"rustc":3249269541886640494,"features":"[]","target":8050488081722200035,"profile":3735503092003429423,"path":14270651386155905663,"deps":[[8121635694596382552,"num_traits",false,13833620218316156886],[14051957667571541382,"bitflags",false,6434646283367728300]],"local":[{"CheckDepInfo":{"dep_info":"debug\\.fingerprint\\spirv-538059eecd059112\\dep-lib-spirv"}}],"rustflags":[],"metadata":12433600939443802614,"config":2202906307356721367,"compile_kind":0}
->>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
