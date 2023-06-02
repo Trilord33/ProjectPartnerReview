@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-{"rustc":3249269541886640494,"features":"[\"default\", \"std\"]","target":3122691792076482017,"profile":3735503092003429423,"path":12908940907221455377,"deps":[[6893260508610722743,"build_script_build",false,17510383220002274069]],"local":[{"CheckDepInfo":{"dep_info":"debug\\.fingerprint\\memchr-f458b5fd399b9809\\dep-lib-memchr"}}],"rustflags":[],"metadata":508135869874479790,"config":2202906307356721367,"compile_kind":0}
-=======
-{"rustc":3249269541886640494,"features":"[\"default\", \"std\"]","target":3122691792076482017,"profile":3735503092003429423,"path":9875806051821465376,"deps":[[6893260508610722743,"build_script_build",false,7884414725617572344]],"local":[{"CheckDepInfo":{"dep_info":"debug\\.fingerprint\\memchr-f458b5fd399b9809\\dep-lib-memchr"}}],"rustflags":[],"metadata":508135869874479790,"config":2202906307356721367,"compile_kind":0}
->>>>>>> 4fc876cc0cc631b86384b38256300d0e9ad03e43
