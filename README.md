@@ -82,7 +82,6 @@ NOTE: Gamepad has only been tested with an Xbox style of controller. Results may
 
 # Documentation
 
-<<<<<<< HEAD
 In order to get documentation run the following from `car_demo` folder:
 
 >```cargo docs --no-deps --open```
