@@ -82,7 +82,12 @@ NOTE: Gamepad has only been tested with an Xbox style of controller. Results may
 
 # Documentation
 
-In Rust Docs in car_demo/target/docs
+In order to get documentation run the following from `car_demo` folder:
+
+>```cargo docs --no-deps --open```
+
+
+This will create and open the documentation for our program in a website based format. These files are stored locally and can be found in `car_demo\target\doc`
 
 # Repository
 
